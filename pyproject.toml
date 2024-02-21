@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "graphql-training"
+version = "0.1.0"
+description = ""
+authors = ["hoge"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sqlalchemy = "^2.0.27"
+strawberry-graphql = "^0.219.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
