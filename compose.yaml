@@ -1,0 +1,25 @@
+services:
+  db:
+    image: mysql:8
+    ports:
+      - 3306:3306
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: toor
+    # networks:
+      # - mysql-network
+  # docker-compose run cli
+  # cli:
+  #   image: mysql:8
+  #   networks:
+  #     - mysql-network
+  #   command: mysql -hdb -uuser -ppassword db
+volumes:
+  mysql_data:
+# networks:
+#   mysql-network:
+#     driver: bridge
